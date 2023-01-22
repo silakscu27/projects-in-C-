@@ -1,0 +1,46 @@
+#include <stdio.h>
+
+ int main()
+ {
+ int largest,smallest,s1,s2,s3;
+ int temp; /* temporary integer for swapping */
+
+ printf( "Input 5 integers: " ); 
+ scanf( "%d%d%d%d%d", &largest, &smallest, &s1, &s2, &s3 );
+
+ if ( smallest > largest ) { 
+ temp = largest;
+ largest = smallest;
+ smallest = temp;
+ } 
+
+ if ( s1 > largest ) {
+ largest = s1;
+ } 
+
+ if ( s1 < smallest ) {
+ smallest = s1;
+ } 
+
+ if ( s2 > largest ) {
+ largest = s2;
+ } 
+
+ if ( s2 < smallest ) {
+ smallest = s2;
+ } 
+
+ if ( s3 > largest ) {
+ largest = s3;
+ } 
+
+ if ( s3 < smallest ) {
+ smallest = s3;
+ } 
+
+ printf( "The largest value is %d\n", largest );
+ printf( "The smallest value is %d\n", smallest );
+
+ return 0; 
+
+ }
