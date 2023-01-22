@@ -1,0 +1,68 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+
+struct hasta {
+	char tc[11]; 
+	char ad[15]; 
+	char soyad[18];  };
+
+void hastaKayit(){
+	system("cls")  ; 
+	struct hasta h1;  
+	printf("---Hasta kayit ekrani--- \n"); 
+	
+int i;
+for(i=0; i<5; i++){
+
+	printf("\nTC        : "); 
+	scanf(" %[^\n]s", h1.tc); 
+	
+	printf("AD        : "); 
+	scanf(" %[^\n]s", h1.ad); 
+	
+	printf("SOYAD     : "); 
+	scanf(" %[^\n]s", h1.soyad); }
+
+system("cls")  ;
+printf("Kayit listesi\n");
+for(i=0; i<5; i++){
+	printf("\nSira numarasi: %d\n",i+1);
+        printf("Ad: ");
+        puts(h1.ad);
+        printf("Soyad: ");
+        puts(h1.soyad);
+        printf("TC:");
+        puts(h1.tc);
+}
+}
+
+int menu( )
+{
+	int secim; 
+	printf("\n*******HASTANE OTOMASYON SISTEMI******* \n\n") ; 
+	printf("1- Hasta Kayit \n") ; 
+	printf("2- Tarih Secimi \n") ; 
+	printf("3- Saat Secimi \n") ;  
+	printf("0- Programdan cikis yap \n") ; 
+	printf("seciminiz :   ") ;  
+	scanf("%d", &secim) ; 
+	return secim; 	
+}
+int main() 
+{
+	int secim= menu(); 
+	while( secim != 0 )
+	{
+		switch(secim )
+		{
+			case 1: hastaKayit(); 
+			break; 
+			default : printf("HATALI SECIM!!!\n"); 
+			break; 			
+		}
+		secim = menu(); 		
+	}
+	return 0; 
+	}
