@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main()
+ {
+ int i,count = 0; 
+
+ printf( "\nnumber\tsquare\tcube\n" );
+ 
+ for(i=0;i<=10;i++){
+ 	 printf( "%d\t%d\t%d\n", count, count * count,
+  		count * count * count );
+  		count++;
+  }
+  
+ return 0; 
+
+}
