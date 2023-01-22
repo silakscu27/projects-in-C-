@@ -1,0 +1,62 @@
+#include <stdio.h>
+#include <string.h> 
+#include <stdlib.h> 
+#include <ctype.h> 
+
+
+int main()
+{
+
+	char text[1024];
+	char voWels[] ="aeiuo";
+	
+	printf("Text  : " ) ;  
+	fgets(text, 1024, stdin) ;  
+	
+	int vowel=0,  consonant=0, wordNumber=0, eMailNumber=0, SentenceNumber=0;
+	
+	int n= strlen(text);
+	
+	strlwr(text);
+	printf("\nNew text  : %s \n",  text) ;
+
+
+	int i,j; 
+	  for( i=0; i<n-1; i++)
+	{
+
+	for( j=0; j<5; j++)
+	{
+	//Number of vowels
+	if( text[i]== voWels[j] )
+	{
+	vowel++;
+	
+	}	
+	}
+	
+	//Number of words
+	if( text[i] == ' ')  
+	wordNumber++;
+	
+	//Number of consonants
+	else if( ( text[i] >97 && text[i] < 123  ) ) //ascii
+	consonant++;
+	
+	//Number of e-mails
+	if(  text[i] == '@' )
+	eMailNumber ++;
+	
+	//Number of sentences
+	if( text[i] == '.' )
+	SentenceNumber ++;
+	}
+	
+	printf("The number of vowels : %d \n", vowel ) ;
+	printf("The number of consonants : %d \n", consonant ) ;
+	printf("The number of words     : %d \n" , ++wordNumber) ;
+	printf("The number of e-mails     : %d \n" , eMailNumber ) ;	
+	printf("The number of sentences      : %d \n", SentenceNumber);
+	
+	return 0;
+}
