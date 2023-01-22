@@ -1,0 +1,92 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char *argv[])
+{
+  int i,n;
+  float v,p1,p2,d,f,yil_ici_not,yil_sonu_not,ort;
+  
+
+printf("Lutfen kac ogrenci icin not girilecegini giriniz:");
+scanf("%d",&n);
+printf("\n");
+
+for(i=0;i<n;i++){
+
+    printf("\n\nKlavyeden 0-100 arasi vize(v) notunu giriniz:");
+    scanf("%f",&v); 
+    
+    printf("Klavyeden 0-100 arasi 1.proje(p1) notunu giriniz:");
+    scanf("%f",&p1);
+    
+    printf("Klavyeden 0-100 arasi 2.proje(p2) notunu giriniz:");
+    scanf("%f",&p2);
+    
+    printf("Klavyeden 0-100 arasi donem odevi(d) notunu giriniz:");
+    scanf("%f",&d);
+    
+    printf("Klavyeden 0-100 arasi final(f) notunu giriniz:");
+    scanf("%f",&f);
+
+if(v>100 || v<0 || p1<0 || p1>100 || p2<0 || p2>100 || d<0 || d>100 || f<0 || f>100){
+
+	printf("\nHatali not girdiniz,lutfen tekrar deneyiniz!!!");
+	i--;
+}
+
+else {
+
+yil_ici_not=v*0.45+p1*0.2+p2*0.2+d*0.15;
+printf("\nyil ici not:%0.2f",yil_ici_not);
+ 
+yil_sonu_not=f*1;
+printf("\nyil sonu not:%0.2f",yil_sonu_not);
+ 
+ ort=yil_ici_not*0.45+yil_sonu_not*0.55;
+ printf("\nortalama:%0.2f\n",ort);
+ 
+ 
+
+           if(ort>=90)
+		{
+			printf("\nAA\n");
+		}
+		else if(ort>=85)
+		{
+			printf("\nBA\n");
+		}
+		else if(ort>=80)
+		{
+			printf("\nBB\n");
+		}
+		else if(ort>=75)
+		{
+			printf("\nCB\n");
+		}
+		else if(ort>=65)
+		{
+			printf("\nCC\n");
+		}
+		else if(ort>=58)
+		{
+			printf("\nDC\n");
+		}
+		else if(ort>=50)
+		{
+			printf("\nDD\n");
+		}
+		else if(ort>=40)
+		{
+			printf("\nFD\n");
+		}
+		else
+		{
+			printf("\nFF\n");
+		}
+}
+
+printf("\n");
+}
+  system("PAUSE");	
+  return 0;
+ }
