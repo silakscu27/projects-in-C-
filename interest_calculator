@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+ int main()
+ {
+ double principal,rate,interest; 
+ int term; 
+
+ printf( "Enter loan principal ( 0 to end): " );
+ scanf( "%lf", &principal );
+ while ( principal != 0.0 ) {
+ printf( "Enter interest rate: " ); 
+ scanf( "%lf", &rate );
+
+ printf( "Enter term of the loan in days: " ); 
+ scanf( "%d", &term );
+
+ /* calculate interest charge */
+ interest = principal * rate * term / 365.0;
+ printf( "\nThe interest charge is $%.2f\n\n\n", interest );
+
+ /* get next loan principal */
+ printf( "Enter loan principal ( 0 to end ): " );
+ scanf( "%lf", &principal );
+ } 
+
+ return 0; 
+
+ }
