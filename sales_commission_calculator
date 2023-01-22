@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+ int main()
+ {
+ double sales,wage; 
+ 
+printf( "Enter sales in dollars ( 0 to end): " );
+scanf( "%lf", &sales );
+
+ while ( sales != 0 ) {
+ wage = 200.0 + 0.09 * sales; 
+
+ printf( "Salary is: $%.2f\n\n", wage );
+
+ printf( "Enter sales in dollars ( 0 to end ): " );
+ scanf( "%lf", &sales );
+ } 
+
+ return 0; 
+
+ }
