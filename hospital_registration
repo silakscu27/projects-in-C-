@@ -43,8 +43,6 @@ int menu( )
 	int secim; 
 	printf("\n*******HASTANE OTOMASYON SISTEMI******* \n\n") ; 
 	printf("1- Hasta Kayit \n") ; 
-	printf("2- Tarih Secimi \n") ; 
-	printf("3- Saat Secimi \n") ;  
 	printf("0- Programdan cikis yap \n") ; 
 	printf("seciminiz :   ") ;  
 	scanf("%d", &secim) ; 
